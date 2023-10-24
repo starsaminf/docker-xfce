@@ -1,0 +1,24 @@
+name: build and push docker image
+on:
+  push:
+    branches: 
+      - 'main'
+jobs:
+  create-package:
+    if: ${{github.ref == 'refs/heads/main'}}
+    needs: build-lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build Docker latest tag
+      run: |
+        docker build . -t ghcr.io/starsaminf/docker-xfce:latest
+    - name: Push latest tag image
+      run: |
+        docker push ghcr.io/starsaminf/docker-xfce:latest
