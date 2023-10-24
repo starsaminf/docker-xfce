@@ -6,7 +6,6 @@ on:
 jobs:
   create-package:
     if: ${{github.ref == 'refs/heads/main'}}
-    needs: build-lint
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
