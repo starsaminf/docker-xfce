@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build Docker latest tag
       run: |
-        docker build . -t ghcr.io/starsaminf/docker-xfce:latest
+        docker build . -t ghcr.io/starsaminf/docker-xfce
     - name: Push latest tag image
       run: |
-        docker push ghcr.io/starsaminf/docker-xfce:latest
+        docker push ghcr.io/starsaminf/docker-xfce
