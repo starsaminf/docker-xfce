@@ -91,4 +91,4 @@ RUN Configfile="~/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml" && \
     " > /usr/local/bin/start && \
     chmod +x /usr/local/bin/start
 
-CMD startxfce4
+CMD /usr/local/bin/start
