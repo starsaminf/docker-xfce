@@ -19,8 +19,10 @@ Until the moment I don't have any problem.
 
 
 # Download
-https://github.com/starsaminf/docker-xfce/pkgs/container/docker-xfce
-
+https://github.com/starsaminf/docker-xfce/pkgs/container/docker-xfce  
+```bash
+docker pull ghcr.io/starsaminf/docker-xfce:latest
+```
 # Screenshot  
 ![docker xfce4](./xfce4.png)
 
