@@ -60,6 +60,7 @@ RUN apt-get update && apt-mark hold iptables && \
     xfce4-timer-plugin \
     xfce4-verve-plugin \
     xfce4-weather-plugin \
+    xvfb \
     xfce4-whiskermenu-plugin && \
     env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     libxv1 \
